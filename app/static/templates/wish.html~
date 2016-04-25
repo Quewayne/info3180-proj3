@@ -1,0 +1,33 @@
+<div class="container" >
+   	<h1>Add Wish</h1>
+	<form role="form" ng-submit="getImages()" method="post" class="form-images">
+	<div class="form-group">
+   		<h2 class="form-signin-heading">Please enter url</h2>
+   		<label for="inputUrl" class="sr-only">URL</label>
+   		<input type="url" ng-model="url" name="url" id="inputUrl" class="form-control" placeholder="Http://www.image.url" required="" autofocus="">
+   		
+   		</div>
+   		<button class="btn btn-lg btn-primary btn-block" type="submit">Get Images</button>
+	</form>
+	<h2 > {{k}}</h2>
+	
+	<form ng-hide="toggleVar" role="form" ng-submit="getdetails()" method="post" class="form-details">
+	<div class="form-group">
+   		<h2 class="form-signin-heading">Enter Details</h2>
+   		<label for="inputTitle" class="sr-only">Title</label>
+   		<input type="text" ng-model="title" name="title" id="inputTitle" class="form-control" placeholder="Img Title" required="">
+   		
+   		<label for="inputDescrip" class="sr-only">Title</label>
+   		<input type="text" ng-model="description" name="description" id="inputDescrip" class="form-control" placeholder="Img Description" required="">
+   		
+   		</div>
+   		<button class="btn btn-lg btn-primary btn-block" type="submit">Get Images</button>
+	</form>
+	
+	<div class="col-md-4" ng-repeat="x in n track by $index">
+	
+      	<img ng-init ="s='max-height:100%;max-width:100%'" ng-mouseover="s='max-height:100%;max-width:100%;border:solid 5px gold;box-shadow: 0 0 10px #333;  -webkit-box-shadow: 0 0 10px #333;  -moz-box-shadow: 0 0 10px #333;  -o-box-shadow: 0 0 10px #333;  -ms-box-shadow: 0 0 10px #333'" ng-mouseleave="s='max-height:100%;max-width:100%'"  ng-click="change($index)" src="{{x}}" style={{s}}>
+      
+    </div>
+</div>
+

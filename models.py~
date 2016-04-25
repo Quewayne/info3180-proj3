@@ -1,0 +1,32 @@
+from . import db
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100))
+    password = db.Column(db.String(64))
+    uname= db.Column(db.String(64))
+#    wish = db.relationship('Wish',backref='user')
+
+    def __init__(self, email, password ,uname):
+       self.email = email
+       self.password = password
+       self.uname = uname 
+       
+
+#class Wish(db.Model):
+#	id = db.Column(db.Integer, primary_key=True)
+#	title = db.Column(db.String(180))
+##       thumbnail = db.Column(db.String(400))
+  #      user = db.Column(db.String(64), db.ForeignKey("User.uname"))
+   #     url = db.Column(db.String(400)) 
+    #    
+     #   def __init__(self, title,description,thumbnail,user,url):
+      #  	self.title = title
+       # 	self.description = description
+        ##	self.user = user
+        #	self.url = url
+       # 	
+       # 
+	#def __repr__(self):
+	#	return '<Wish %r>' % self.title
+        	   

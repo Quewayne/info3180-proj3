@@ -1,0 +1,15 @@
+<div class="container">
+   	<h1>Login</h1>
+	<form role="form" ng-submit="getResults()" method="post" class="form-signin">
+	<div class="form-group">
+   		<h2 class="form-signin-heading">Please sign in</h2>
+   		<label for="inputEmail" class="sr-only">Email address</label>
+   		<input type="email" ng-model="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+   		<label for="inputPassword" class="sr-only">Password</label>
+   		<input type="password" ng-model="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+   		</div>
+   		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+	</form>
+	<p ng-hide="toggleVar">{{msg}}</p>
+</div>
+
